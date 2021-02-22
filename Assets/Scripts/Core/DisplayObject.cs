@@ -1383,7 +1383,7 @@ namespace FairyGUI
                     RaycastHit hit;
                     if (((MeshColliderHitTest)wsc.hitArea).collider.Raycast(ray, out hit, 100))
                     {
-                        point = new Vector2(hit.textureCoord.x * _contentRect.width, (1 - hit.textureCoord.y) * _contentRect.height);
+                        point = new Vector2(hit.textureCoord.x * wsc._contentRect.width, (1 - hit.textureCoord.y) * wsc._contentRect.height);
                         worldPoint = Stage.inst.cachedTransform.TransformPoint(point.x, -point.y, 0);
                         direction = Vector3.back;
                     }
